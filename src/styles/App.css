@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    position: relative;
+}
+
+.calculator-content{
+    width: 600px;
+    height: auto;
+    padding: 10px 25px 10px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    margin: auto;
+    transform: translateY(35%);
+}
+
+.results-area{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin: 15px 0 10px 10px;
+    font-size: 25px;
+    padding: 10px;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.results-area.stored{
+    margin-top: 10px;
+    flex-direction: column;
+    text-align: right;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.results-area.value{
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.stored-icon{
+    top: 8px;
+    left: 25px;
+    position: absolute;
+    font-size: 30px;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.stored-icon:hover{
+    transform: scale(1.1);
+    color: wheat;
+}
+
+.stored-value{
+    width: fit-content;
+    color: black;
+    transition: all .2s ease;
+    z-index: 10;
+    cursor: pointer;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.stored-value:hover{
+    color: wheat;
+}
+
+.stored-box{
+    display: flex;
+    justify-content: right;
+}
+
+.stored-column{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.stored-row{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+hr{
+    border-color: rgb(1, 1, 2);
+    border-width: 1px;
+    opacity: 0.6;
+    width: 95%;
+    transform: translateX(20px);
+}
+
+.btns-upper{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 85%;
+
+    padding: 10px;
+}
+
+.btns-upper div{
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+    width: 33%;
+    font-size: 35px;
+}
+
+.btns-upper div + div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers-content{
+    width: 85%;
+}
+
+.numbers-content tr td{
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+    width: 33%;
+    font-size: 35px;
+}
+
+.numbers-content tr:last-child td:first-child{
+    width: 66.5%;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+.btns-right-content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+}
+
+.btns-right-content div:first-child {
+    margin-top: 10px;
+}
+
+.btns-right-content div:nth-child(2){
+    margin-top: 21.5px;
+}
+
+.btns-right-content div:nth-child(3), .btns-right-content div:nth-child(3) ~ div{
+    margin-top: 20px;
+}
+
+.btn-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 35px;
+    cursor: pointer;
+    height: 49px;
+}
+
+
+.active :active{
+    border-color:wheat;
+    color: wheat;
+}
